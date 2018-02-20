@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="rpm">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>RPM</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body ng-controller="TenantComGetPostController">
+  
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#!/">RPM</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#"></a>
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Main Jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Tenant</h1>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+     <form class="form-horizontal" id="registerForm"   ng-submit="submitForm()"> 
+	  <!-- <form class="form-horizontal" id="registerForm" method="post" action="http://localhost:8085/RPM/rest/tenantforms" > --> 
+    <div id="legend">
+      <legend class="">Enter the Tenant details</legend>
+    </div>
+    
+  
+    <div class="form-group row">
+      <label class="col-xs-2 col-form-label"  for="fname">&nbsp; &nbsp; First Name  &nbsp;</label>
+      <div class="col-xs-12">
+        <input type="text" id="fname" ng-model="data.fname" name="fname" placeholder="First name" class="form-control" required>
+        </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-xs-2 col-form-label" for="lname">&nbsp; &nbsp; Last Name &nbsp;</label>
+    <div class="col-xs-10">
+        <input type="text" id="lname" name="lname" ng-model="data.lname" placeholder="Last name" class="form-control" required>
+        </div>
+    </div>
+    
+
+ 
+ <div class="submitResult" ng-bind="result">
+  
+    </div>   
+  <button type="submit" class="btn btn-success" >Submit</button>
+  <a class="btn btn-success" href="#!tenant">Cancel</a>
+ 
+</form>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; RPM 2017</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-resource.min.js"></script>
+<script src="lib/angular-route.min.js"></script>
+<script src="js/app.controller.js"></script>  
+<script src="js/app.services.js"></script>  
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap-4.0.0-alpha.6/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
